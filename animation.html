@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            animation-name: sample ;
+            animation-duration: 3s;
+            animation-timing-function:linear;
+            animation-direction:normal;
+            animation-iteration-count: infinite;
+        }
+
+        /* animation types:translate, rotate, scale, skew */
+
+        @keyframes sample{
+            0%{
+                transform:translate(0,0) ;
+            }
+            25%{
+                transform: translate(700px, 0);
+            }
+            50%{
+                transform: translate(700px, 400px);
+            }
+            75%{
+                transform: translate(0px,400px);
+            }
+        }
+
+        .rotate{
+            width: 300px;
+            height: 300px;
+            margin: 200px auto;
+            border: 3px solid black;
+            background: conic-gradient( red,blue,green,orange);
+            /* border-radius: 50%; */
+            animation: rotate 2s alternate linear infinite ;
+        }
+
+        @keyframes rotate{
+
+            0%{
+                transform:scale(0,0);
+            }
+
+            100%{
+                transform: scale(0.5,0.5);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <div class="box">BOX</div> -->
+
+    <div class="rotate"></div>
+    
+</body>
+</html>
